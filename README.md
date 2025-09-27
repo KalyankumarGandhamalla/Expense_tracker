@@ -21,6 +21,10 @@ Built with **HTML**, **CSS**, and **JavaScript** (no frameworks required) and us
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
 - **Chart Library:** [Chart.js](https://www.chartjs.org/)
 
+## 🚀 Live Demo
+I have deployed to GitHub Pages 
+Live url : https://kalyankumargandhamalla.github.io/Expense_tracker/
+
 
 ## 📂 Project Structure
 expense-tracker/
