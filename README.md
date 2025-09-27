@@ -23,7 +23,7 @@ Built with **HTML**, **CSS**, and **JavaScript** (no frameworks required) and us
 
 ## 🚀 Live Demo
 I have deployed to GitHub Pages 
-Live url : https://kalyankumargandhamalla.github.io/Expense_tracker/
+**Live url** : https://kalyankumargandhamalla.github.io/Expense_tracker/
 
 
 ## 📂 Project Structure
