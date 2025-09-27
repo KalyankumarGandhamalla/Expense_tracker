@@ -1,0 +1,176 @@
+/* --- Base Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 430px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- Form Layout --- */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form select,
+.form button {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* --- Chart Sizing --- */
+#expenseChart {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form input,
+  .form select,
+  .form button {
+    width: 100%;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* === Inline Edit Form Styling === */
+/* ----- Inline edit layout ----- */
+li.editing {
+  display: block;           /* stop the default flex row */
+}
+
+li.editing .edit-desc,
+li.editing .edit-amount,
+li.editing .edit-category {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+/* Buttons row: Cancel left, Save right */
+li.editing .edit-actions {
+  display: flex;
+  justify-content: space-between;  /* left & right ends */
+  margin-top: 8px;
+}
+
+li.editing .edit-actions button {
+  padding: 8px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+
+/* ===========================
+   🌙  Dark Mode Overrides
+   =========================== */
+html.dark {
+  background: #121212;            /* page background */
+}
+
+html.dark body {
+  background: #121212;            /* fallback for flex body bg */
+  color: #e0e0e0;                 /* base text color */
+}
+
+html.dark .container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+html.dark .form input,
+html.dark .form select,
+html.dark .form button,
+html.dark li.editing .edit-desc,
+html.dark li.editing .edit-amount,
+html.dark li.editing .edit-category {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #f1f1f1;
+}
+
+html.dark li {
+  border-bottom: 1px solid #444;
+}
+
+html.dark li button {
+  color: #ff7676;
+}
+
+html.dark #expenseChart {
+  background: transparent;  /* keep chart clear */
+}
+
+/* Toggle button appearance (optional) */
+#themeToggle {
+  background: #eee;
+  color: #111;
+}
+html.dark #themeToggle {
+  background: #333;
+  color: #fff;
+}
